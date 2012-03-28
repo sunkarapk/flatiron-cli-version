@@ -1,2 +1,39 @@
 {
+  "name": "flatiron-cli-version",
+  "version": "0.1.0",
+  "author": "Pavan Kumar Sunkara <pavan.sss1991@gmail.com> (pksunkara.github.com)",
+  "description": "Version command plugin flatiron cli",
+  "main": "./index",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pksunkara/flatiron-cli-version.git"
+  },
+  "keywords": [
+    "flatiron",
+    "cli",
+    "version",
+    "plugin"
+  ],
+  "homepage": "http://pksunkara.github.com/flatiron-cli-version",
+  "scripts": {},
+  "contributors": [
+    {
+      "name": "Pavan Kumar Sunkara",
+      "email": "pavan.sss1991@gmail.com"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.6"
+  },
+  "bugs": {
+    "url": "https://github.com/pksunkara/flatiron-cli-version/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/pksunkara/flatiron-cli-version/raw/master/LICENSE"
+    }
+  ]
 }
