@@ -1,6 +1,6 @@
 {
   "name": "flatiron-cli-version",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Pavan Kumar Sunkara <pavan.sss1991@gmail.com> (pksunkara.github.com)",
   "description": "Encapsulated command for showing version in flatiron CLI apps",
   "main": "./index",
@@ -23,7 +23,7 @@
     }
   ],
   "dependencies": {
-    "pkginfo": "0.2.3"
+    "pkginfo": "0.2.x"
   },
   "devDependencies": {},
   "engines": {
