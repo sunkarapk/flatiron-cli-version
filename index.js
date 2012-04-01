@@ -15,9 +15,10 @@ cliVersion.attach = function (options) {
   var app = this;
   options = options || {};
 
-  if (!app.plugins.cli) {
-    throw new Error('`cli` plugin is required to use `flatiron-cli-version`');
+  if (!app.cli) {
+    app.cli = {};
   }
+  app.cli.version = true;
 
   var data = { exports: {} };
   require('pkginfo')(data, { include: ['name', 'version'], dir: options.dir || __dirname });
@@ -27,6 +28,14 @@ cliVersion.attach = function (options) {
   }
 
   app.version = data.exports.version;
+};
+
+cliVersion.init = function (done) {
+  var app = this;
+
+  if (!app.plugins.cli) {
+    throw new Error('`cli` plugin is required to use `flatiron-cli-version`');
+  }
 
   app.commands['version'] = function (cb) {
     app.log.info(app.name + ' ' + ('v' + app.version).yellow.bold);
@@ -38,4 +47,6 @@ cliVersion.attach = function (options) {
     '',
     app.name + ' version'
   ].join("\n");
+
+  done();
 };
