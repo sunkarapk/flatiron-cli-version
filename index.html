@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>flatiron-cli-version by pksunkara</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>flatiron-cli-version</h1>
+        <h2>flatiron cli plugin for showing version</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/pksunkara/flatiron-cli-version/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/pksunkara/flatiron-cli-version/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/pksunkara/flatiron-cli-version" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <p>Encapsulated commands for version in flatiron CLI apps</p>
+
+<h2>Installation</h2>
+
+<pre><code>npm install flatiron-cli-version
+</code></pre>
+
+<h2>Usage</h2>
+
+<p>At its core <code>flatiron-cli-version</code> is a broadway-compatible plugin which can be used by any <a href="http://flatironjs.org">flatiron</a> application. This module uses <a href="https://github.com/indexzero/node-pkginfo">pkginfo</a> to read package.json to set <code>app.name</code> and <code>app.version</code></p>
+
+<div class="highlight">
+<pre><span class="kd">var</span> <span class="nx">flatiron</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'flatiron'</span><span class="p">)</span>
+  <span class="p">,</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">flatiron</span><span class="p">.</span><span class="nx">app</span><span class="p">;</span>
+
+<span class="c1">// Expose CLI commands using `flatiron-cli-version`</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="s1">'flatiron-cli-version'</span><span class="p">));</span>
+
+<span class="c1">// Configure the Application to be a CLI app with</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">flatiron</span><span class="p">.</span><span class="nx">plugins</span><span class="p">.</span><span class="nx">cli</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">usage</span><span class="o">:</span> <span class="s1">'A simple CLI app using flatiron-cli-version'</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
+</pre>
+</div>
+
+
+<p>So, you can run the above script as:</p>
+
+<pre><code>➤ appname -v
+0.1.0
+➤ appname --version
+0.1.0
+</code></pre>
+
+<p>Set <code>options.route</code> to true</p>
+
+<div class="highlight">
+<pre><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="s1">'flatiron-cli-version'</span><span class="p">),</span> <span class="p">{</span> <span class="nx">route</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
+</pre>
+</div>
+
+
+<p>for the following routes (commands) to work</p>
+
+<pre><code>➤ appname version
+info:   appname v0.1.0
+</code></pre>
+
+<pre><code>➤ appname help version
+help:   Display app version
+help:
+help:   appname version
+</code></pre>
+
+<p>If you want <code>pkginfo</code> to set more than <code>name</code> and <code>version</code>, use <code>options.keys</code></p>
+
+<div class="highlight">
+<pre><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="s1">'flatrion-cli-version'</span><span class="p">),</span> <span class="p">{</span> <span class="nx">keys</span><span class="o">:</span> <span class="p">[</span><span class="s1">'repository'</span><span class="p">]</span> <span class="p">});</span>
+</pre>
+</div>
+
+
+<h2>Contact</h2>
+
+<p>Pavan Kumar Sunkara (pavan.sss1991@gmail.com)</p>
+
+<p>Follow me on <a href="http://github.com/pksunkara">github</a>, <a href="http://twitter.com/pksunkara">twitter</a></p>
+      </section>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-9209860-7");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
