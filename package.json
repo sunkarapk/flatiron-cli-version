@@ -1,8 +1,8 @@
 {
   "name": "flatiron-cli-version",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Pavan Kumar Sunkara <pavan.sss1991@gmail.com> (pksunkara.github.com)",
-  "description": "Encapsulated command for showing version in flatiron CLI apps",
+  "description": "Encapsulated command for version in flatiron CLI apps",
   "main": "./index",
   "repository": {
     "type": "git",
