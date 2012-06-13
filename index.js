@@ -28,8 +28,18 @@ cliVersion.attach = function (options) {
   if (!app.name) {
     app.name = data.exports.name;
   }
-
   app.version = data.exports.version;
+
+  if (!app.cli.argv) {
+    app.cli.argv = {};
+  }
+  app.cli.argv.version = {
+    alias: 'v',
+    string: true,
+    description: 'print ' + app.name + ' version and exit'
+  };
+
+  return;
 };
 
 cliVersion.init = function (done) {
