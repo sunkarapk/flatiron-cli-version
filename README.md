@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/pksunkara/flatiron-cli-version.png)](http://travis-ci.org/pksunkara/flatiron-cli-version)
 # flatiron-cli-version
 Encapsulated commands for version in flatiron CLI apps
 
