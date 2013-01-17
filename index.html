@@ -39,8 +39,7 @@
 
 <p>At its core <code>flatiron-cli-version</code> is a broadway-compatible plugin which can be used by any <a href="http://flatironjs.org">flatiron</a> application. This module uses <a href="https://github.com/indexzero/node-pkginfo">pkginfo</a> to read package.json to set <code>app.name</code> and <code>app.version</code></p>
 
-<div class="highlight">
-<pre><span class="kd">var</span> <span class="nx">flatiron</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'flatiron'</span><span class="p">)</span>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">flatiron</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'flatiron'</span><span class="p">)</span>
   <span class="p">,</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">flatiron</span><span class="p">.</span><span class="nx">app</span><span class="p">;</span>
 
 <span class="c1">// Expose CLI commands using `flatiron-cli-version`</span>
@@ -52,9 +51,7 @@
 <span class="p">});</span>
 
 <span class="nx">app</span><span class="p">.</span><span class="nx">start</span><span class="p">();</span>
-</pre>
-</div>
-
+</pre></div>
 
 <p>So, you can run the above script as:</p>
 
@@ -66,11 +63,8 @@
 
 <p>Set <code>options.route</code> to true</p>
 
-<div class="highlight">
-<pre><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="s1">'flatiron-cli-version'</span><span class="p">),</span> <span class="p">{</span> <span class="nx">route</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
-</pre>
-</div>
-
+<div class="highlight"><pre><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="s1">'flatiron-cli-version'</span><span class="p">),</span> <span class="p">{</span> <span class="nx">route</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
+</pre></div>
 
 <p>for the following routes (commands) to work</p>
 
@@ -86,15 +80,12 @@ help:   appname version
 
 <p>If you want <code>pkginfo</code> to set more than <code>name</code> and <code>version</code>, use <code>options.keys</code></p>
 
-<div class="highlight">
-<pre><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="s1">'flatrion-cli-version'</span><span class="p">),</span> <span class="p">{</span> <span class="nx">keys</span><span class="o">:</span> <span class="p">[</span><span class="s1">'repository'</span><span class="p">]</span> <span class="p">});</span>
-</pre>
-</div>
-
+<div class="highlight"><pre><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">require</span><span class="p">(</span><span class="s1">'flatrion-cli-version'</span><span class="p">),</span> <span class="p">{</span> <span class="nx">keys</span><span class="o">:</span> <span class="p">[</span><span class="s1">'repository'</span><span class="p">]</span> <span class="p">});</span>
+</pre></div>
 
 <h2>Contact</h2>
 
-<p>Pavan Kumar Sunkara (pavan.sss1991@gmail.com)</p>
+<p>Pavan Kumar Sunkara (<a href="mailto:pavan.sss1991@gmail.com">pavan.sss1991@gmail.com</a>)</p>
 
 <p>Follow me on <a href="http://github.com/pksunkara">github</a>, <a href="http://twitter.com/pksunkara">twitter</a></p>
       </section>
